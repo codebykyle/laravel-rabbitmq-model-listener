@@ -1,0 +1,35 @@
+{
+    "name": "codebykyle/laravel-rabbitmq-model-listener",
+    "description": "Listen to model events on RabbitMQ",
+    "keywords": [
+        "laravel",
+        "rabbitmq",
+        "amqp",
+        "microservice",
+        "crud"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0",
+        "bschmitt/laravel-amqp": "^2.0",
+        "illuminate/config": "^6.0",
+        "illuminate/support": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodeByKyle\\LaravelRabbitMqModelListener\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CodeByKyle\\LaravelRabbitMqModelListener\\RabbitMqModelListenerProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
