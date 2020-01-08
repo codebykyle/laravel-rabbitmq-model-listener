@@ -6,9 +6,31 @@ class RabbitMqModelListenerProvider extends \Illuminate\Support\ServiceProvider
 {
     public function boot()
     {
+        $this->app->bind('RabbitMqModelListener', 'CodeByKyle\LaravelRabbitMqModelListener');
+
+        if (!class_exists('RabbitMqModelListener')) {
+            class_alias('CodeByKyle\LaravelRabbitMqModelListener\Facades\RabbitMqModelListener', 'LaravelRabbitMqModelListener');
+        }
+
+        $this->publishes([
+            __DIR__ . '../config/rabbitmq-model-listener.php' => config_path('rabbitmq-model-listener.php')
+        ]);
     }
 
     public function register()
     {
+        $this->app->singleton('RabbitMqModelListener', function ($app) {
+            return new RabbitMqModelListener(
+                config('rabbitmq-model-listener')
+            );
+        });
+    }
+
+    public function provides()
+    {
+        return [
+            'RabbitMqModelListener',
+            'CodeByKyle\LaravelRabbitMqModelListener'
+        ];
     }
 }
