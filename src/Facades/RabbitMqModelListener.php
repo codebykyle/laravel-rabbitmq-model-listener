@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Facade;
  * @package CodeByKyle\RabbitMqModelListener
  * @see CodeByKyle\RabbitMqModelListener\RabbitMqModelListener
  */
-class ModelListener extends Facade
+class RabbitMqModelListener extends Facade
 {
     protected static function getFacadeAccessor()
     {
