@@ -3,6 +3,7 @@
 namespace CodeByKyle\RabbitMqModelListener;
 
 use Bschmitt\Amqp\Consumer;
+use Illuminate\Config\Repository;
 
 class RabbitMqModelListener
 {
@@ -10,7 +11,9 @@ class RabbitMqModelListener
 
     public function __construct(array $config)
     {
-        $this->listener = new Consumer($config);
+        $this->listener = new Consumer(
+            new Repository($config)
+        );
     }
 
     public function test(){
