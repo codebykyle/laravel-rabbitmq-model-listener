@@ -13,7 +13,7 @@ class RabbitMqModelListener
         $this->listener = new Consumer($config);
     }
 
-    public function consoleTest(){
+    public function test(){
         return "Hello!";
     }
 }

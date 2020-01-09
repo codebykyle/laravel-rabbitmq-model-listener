@@ -19,7 +19,7 @@ class RabbitMqModelListenerProvider extends \Illuminate\Support\ServiceProvider
 
     public function register()
     {
-        $this->app->singleton('RabbitMqModelListener', function ($app) {
+        $this->app->singleton('CodeByKyle\RabbitMqModelListener\RabbitMqModelListener', function ($app) {
             return new RabbitMqModelListener(
                 config('rabbitmq-model-listener')
             );
