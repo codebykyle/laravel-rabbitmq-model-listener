@@ -13,7 +13,7 @@ class RabbitMqModelListenerProvider extends \Illuminate\Support\ServiceProvider
         }
 
         $this->publishes([
-            __DIR__ . '../config/rabbitmq-model-listener.php' => config_path('rabbitmq-model-listener.php')
+            __DIR__ . '/../config/rabbitmq-model-listener.php' => config_path('rabbitmq-model-listener.php')
         ]);
     }
 
