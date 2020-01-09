@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeByKyle\Facades\LaravelRabbitMqModelListener;
+namespace CodeByKyle\LaravelRabbitMqModelListener\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
