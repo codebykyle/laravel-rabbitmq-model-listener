@@ -6,10 +6,10 @@ class RabbitMqModelListenerProvider extends \Illuminate\Support\ServiceProvider
 {
     public function boot()
     {
-        $this->app->bind('RabbitMqModelListener', 'CodeByKyle\RabbitMqModelListener');
+        $this->app->bind('RabbitMqModelListener', 'CodeByKyle\RabbitMqModelListener\RabbitMqModelListener');
 
         if (!class_exists('RabbitMqModelListener')) {
-            class_alias('CodeByKyle\RabbitMqModelListener\Facades\RabbitMqModelListener', 'RabbitMqModelListener');
+            class_alias('CodeByKyle\RabbitMqModelListener\Facades\ModelListener', 'RabbitMqModelListener');
         }
 
         $this->publishes([
