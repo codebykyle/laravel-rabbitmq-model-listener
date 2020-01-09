@@ -1,14 +1,14 @@
 <?php
 
-namespace CodeByKyle\LaravelRabbitMqModelListener\Facades;
+namespace CodeByKyle\RabbitMqModelListener\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 
 /**
  * Class RabbitMqModelListener
- * @package CodeByKyle\LaravelRabbitMqModelListener
- * @see CodeByKyle\LaravelRabbitMqModelListener\RabbitMqModelListener
+ * @package CodeByKyle\RabbitMqModelListener
+ * @see CodeByKyle\RabbitMqModelListener\RabbitMqModelListener
  */
 class RabbitMqModelListener extends Facade
 {

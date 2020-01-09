@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeByKyle\LaravelRabbitMqModelListener;
+namespace CodeByKyle\RabbitMqModelListener;
 
 use Bschmitt\Amqp\Consumer;
 

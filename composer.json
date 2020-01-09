@@ -16,16 +16,16 @@
     },
     "autoload": {
         "psr-4": {
-            "CodeByKyle\\LaravelRabbitMqModelListener\\": "src/"
+            "CodeByKyle\\RabbitMqModelListener\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "CodeByKyle\\LaravelRabbitMqModelListener\\RabbitMqModelListenerProvider"
+                "CodeByKyle\\RabbitMqModelListener\\RabbitMqModelListenerProvider"
             ],
             "aliases": {
-                "RabbitMqModelListener": "CodeByKyle\\LaravelRabbitMqModelListener\\Facades\\RabbitMqModelListener"
+                "RabbitMqModelListener": "CodeByKyle\\RabbitMqModelListener\\Facades\\RabbitMqModelListener"
             }
         }
     },

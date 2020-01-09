@@ -1,15 +1,15 @@
 <?php
 
-namespace CodeByKyle\LaravelRabbitMqModelListener;
+namespace CodeByKyle\RabbitMqModelListener;
 
 class RabbitMqModelListenerProvider extends \Illuminate\Support\ServiceProvider
 {
     public function boot()
     {
-        $this->app->bind('RabbitMqModelListener', 'CodeByKyle\LaravelRabbitMqModelListener');
+        $this->app->bind('RabbitMqModelListener', 'CodeByKyle\RabbitMqModelListener');
 
         if (!class_exists('RabbitMqModelListener')) {
-            class_alias('CodeByKyle\LaravelRabbitMqModelListener\Facades\RabbitMqModelListener', 'LaravelRabbitMqModelListener');
+            class_alias('CodeByKyle\RabbitMqModelListener\Facades\RabbitMqModelListener', 'RabbitMqModelListener');
         }
 
         $this->publishes([
@@ -30,7 +30,7 @@ class RabbitMqModelListenerProvider extends \Illuminate\Support\ServiceProvider
     {
         return [
             'RabbitMqModelListener',
-            'CodeByKyle\LaravelRabbitMqModelListener'
+            'CodeByKyle\RabbitMqModelListener'
         ];
     }
 }
